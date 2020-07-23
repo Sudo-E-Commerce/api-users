@@ -1,0 +1,29 @@
+{
+    "name": "sudo/api-users",
+    "description": "API token manager",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Nguyen Viet Hieu",
+            "email": "hieunvph04479@gmail.com"
+        }
+    ],
+    "require": {
+        "sudo/core": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sudo\\ApiUser\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sudo\\ApiUser\\Providers\\ApiUserServiceProvider"
+            ],
+            "aliases": {}
+        }
+    }
+}
