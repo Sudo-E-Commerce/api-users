@@ -31,11 +31,14 @@ class ApiUserController extends AdminController
         $listdata = new ListData($requests, $this->models, 'ApiUser::table.index', $this->has_locale);
         // Build Form tìm kiếm
         $listdata->search('name', 'Tên API', 'string');
+        $listdata->search('api_token', 'Token', 'string');
+        $listdata->search('created_at', 'Ngày tạo', 'range');
         $listdata->search('status', 'Trạng thái', 'array', $this->status);
         // Build bảng
         $listdata->add('name', 'Tên API', 1);
         $listdata->add('api_token', 'Token', 0);
-        $listdata->add('status', 'Tình trạng', 0, 'status');
+        $listdata->add('', 'Thời gian', 0, 'time');
+        $listdata->add('status', 'Trạng thái', 0, 'status');
         $listdata->add('', 'Sửa', 0, 'edit');
         $listdata->add('', 'Xóa', 0, 'delete');
 
