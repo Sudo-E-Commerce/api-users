@@ -86,7 +86,7 @@ class ApiUserController extends AdminController
         // Điều hướng
         return redirect(route('admin.'.$this->table_name.'.'.$redirect, $id))->with([
             'type' => 'success',
-            'message' => __('Core::admin.create_success')
+            'message' => __('Translate::admin.create_success')
         ]);
     }
 
@@ -154,7 +154,7 @@ class ApiUserController extends AdminController
         // Điều hướng
         return redirect(route('admin.'.$this->table_name.'.'.$redirect, $id))->with([
             'type' => 'success',
-            'message' => __('Core::admin.update_success')
+            'message' => __('Translate::admin.update_success')
         ]);
     }
 
